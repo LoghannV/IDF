@@ -151,7 +151,7 @@ article p{
     width: 100%;
 }
 #m1 article:nth-child(2){
-    background: url('../_img/fundo_branco.jpg') no-repeat;
+    background: url('../img/fundo_branco.jpg') no-repeat;
     background-size: cover;
 }
 #m1 img{
@@ -163,7 +163,7 @@ article p{
     background-color: rgb(238, 232, 220);
 }
 #m2 article:nth-child(1){
-    background: url('../_img/fundo_creme.jpg') no-repeat;
+    background: url('../img/fundo_creme.jpg') no-repeat;
     background-size: cover;
 }
 #m2 article:nth-child(2){
