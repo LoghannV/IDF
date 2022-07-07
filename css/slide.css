@@ -1,9 +1,9 @@
 #home{
-    height: 700px;
+    height: 900px;
 }
 .slide{
     width: 1400px;
-    height: 700px;
+    height: 900px;
     overflow: hidden;
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -27,7 +27,7 @@
 }
 .image img{
     width: 1450px;
-    height: 700px;
+    height: 900px;
 }
 
 #atual{
