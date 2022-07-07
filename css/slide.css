@@ -1,0 +1,122 @@
+#home{
+    height: 700px;
+}
+.slide{
+    width: 1400px;
+    height: 700px;
+    overflow: hidden;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    margin: auto auto;
+  
+}
+
+.slides{
+    width: auto;
+    width: 5120px;
+    display: flex;
+    
+}
+.image img{
+    width: 1450px;
+    height: 700px;
+}
+
+#atual{
+    margin-left: 0;
+    transition: all 2s;
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+}
+.btn{
+    position: absolute;
+    color:#fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    cursor:pointer;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    font-size: 1.7em;
+    margin-top:-5px;
+}
+
+.btn:hover{
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+#voltar{
+    top:50%;
+    left:10%;
+}
+#next{
+    top:50%;
+    right:10%;
+}
+
+
+.imgAtual{
+    transition: all 0.5s;
+    background-color: white;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+/*Formata��o do Slide*/
+@media only screen and (min-width: 360px) and (max-width:430px) {
+    #home{
+        height:350px;
+    }
+    .slide{
+        width:300px;
+        height:300px;
+    }
+    .image img{
+        width: 300px;
+        height: 300px;
+    }
+    #voltar, #next{
+        top:40%;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width:1080px){
+    #home{
+        height: 750px;
+    }
+    .image img{
+        width: 850px;
+        height: 650px;
+    }
+    #voltar, #next{
+        
+        top:40%;
+    }
+    #voltar{
+        left: 5%;
+    }
+    #next{
+        left:90%;
+    }
+}
+/*Fim da formata��o do slide*/
