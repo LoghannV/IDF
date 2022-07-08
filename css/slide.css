@@ -1,6 +1,7 @@
---alt-img:950px;
---larg-img: 1350px;
-
+ *{
+    --alt-im: 950px;
+    --larg-im: 1350px;
+   }
 #home{
     height: var(--alt-img);
 }
