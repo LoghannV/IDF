@@ -1,10 +1,11 @@
 --alt-img:950px;
+--larg-img: 1350px;
 
 #home{
     height: var(--alt-img);
 }
 .slide{
-    width: 1400px;
+    width: var(--larg-img);
     height: var(--alt-img);
     overflow: hidden;
     border-radius: 15px;
@@ -28,7 +29,7 @@
     
 }
 .image img{
-    width: 1450px;
+    width: var(--larg-img);
     height: var(--alt-img);
 }
 
