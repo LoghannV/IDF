@@ -348,10 +348,48 @@ article p{
 }
 #alunos article{
     cursor: pointer;
-    border: 1px solid black;
     background-color: white;
     width: 22.8%;
     margin: 15px;
+    outline: 1px solid black;
+    border-radius: 3%;
+    -webkit-border-radius: 3%;
+    -moz-border-radius: 3%;
+    -ms-border-radius: 3%;
+    -o-border-radius: 3%;
+    box-shadow: 2px 2px 2px black;
+}
+#alunos article{
+    opacity: .8;
+}
+#alunos article:hover{
+    opacity: 1;
+}
+#alunos article:nth-child(1){
+    background-image: url('../img/alunos/Belchior.jpeg');
+    background-size: cover;
+    border: 4px solid green;
+}
+
+#alunos article:nth-child(2){
+    background-image: url('../img/alunos/Faixa_branca.jpeg');
+    background-size: cover;
+    border: 4px solid white;
+}
+#alunos article:nth-child(3){
+    background-image: url('../img/alunos/Henrique.jpeg');
+    background-size: cover;
+    border: 4px solid yellow;
+}
+#alunos article:nth-child(4){
+    background-image: url('../img/alunos/Miguel.jpeg');
+    background-size: cover;
+    border: 4px solid white;
+}
+#alunos article:nth-child(5){
+    background-image: url('../img/alunos/Leandro.jpeg');
+    background-size: cover;
+    border: 4px solid white;
 }
 /* Fundo da Pagina */
 
