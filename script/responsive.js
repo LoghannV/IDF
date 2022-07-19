@@ -23,13 +23,28 @@ console.log(w_wd)
 if(w_wd >=360 && w_wd <=980){
    let a_link = document.createElement('a')
    a_link.text = "Assistir Aula"
-   a_link.href = "#"
-   let source = video.innerHTML
+   a_link.href = "#aulas"
+   var modal = document.createElement('div')
+   let video_salvo = video
    artigo_video_1.remove()
    artigo_video.style.width = "100%"
    artigo_video.style.backgroundImage = 'linear-gradient(to right, darkred 50%, darkblue 50%)'
    artigo_video.appendChild(a_link)   
    video.remove()
+   let ativo_modal = false
+   a_link.addEventListener("click",()=>{
+        if(!ativo_modal){
+        modal.classList.add('modal')
+        modal.appendChild(video_salvo)
+        document.body.appendChild(modal)
+        a_link.text ='Fechar Aula'
+        ativo_modal = true
+        }else{
+            modal.remove()
+            a_link.text = "Assistir Aula"
+            ativo_modal = false
+        }
+   })
 
    
 }

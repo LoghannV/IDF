@@ -169,6 +169,37 @@ article p{
     text-align: center;
     color: white;
 }
+/*Modal*/
+
+.modal{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    margin: auto auto;
+    width: 100%;
+    height:300px;
+    background-color: white;
+    border:1px solid black;
+    top: 500px;
+    left:0px;
+    border-radius: 2%;
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    -ms-border-radius: 2%;
+    -o-border-radius: 2%;
+}
+#btn_fechar{
+    font-size: 12pt;
+    color: black;
+    opacity: .8;
+    cursor: pointer;
+   text-align: right;
+}
+.modal video{
+    margin: auto auto;
+    width: 80%;
+    height: 85%;
+}
 #historia article h1{
     text-align: center;
     color: white;
