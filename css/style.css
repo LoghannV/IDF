@@ -18,6 +18,7 @@ font-family: 'Ubuntu', sans-serif;
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
     
 }
 body{
@@ -309,7 +310,17 @@ article p{
     text-align: center;
     background-color:black;
 }
-
+#m3 article:nth-child(2){
+    background-color:rgb(105, 102, 102);
+    width: 50%;
+}
+#m3 article:nth-child(2) img{
+    height: 70%;
+}
+#m3 article:nth-child(1){
+    background-color:rgb(114, 108, 108);
+    width: 100%;
+}
 /* Contato */
 #contato article{
     width: 100%;
@@ -346,11 +357,13 @@ article p{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 #alunos article{
     cursor: pointer;
     background-color: white;
     width: 22.8%;
     margin: 15px;
+    height: 40%;
     outline: 1px solid black;
     border-radius: 3%;
     -webkit-border-radius: 3%;
@@ -365,12 +378,34 @@ article p{
 #alunos article:hover{
     opacity: 1;
 }
+#alunos article h4{
+    transform: rotateY(180deg);
+    text-align: center;
+    width: 100%;
+    height: 20%;
+}
+#alunos article p{
+    transform: rotateY(180deg);
+    text-align: justify;
+    width: 100%;
+    background-color: black;
+    height: 40%;
+    font-size: 12pt;
+    opacity: .6;
+}
 #alunos article:nth-child(1){
     background-image: url('../img/alunos/Belchior.jpeg');
     background-size: cover;
     border: 4px solid green;
+    transition: all 1s;
 }
-
+#alunos article:nth-child(1):hover{
+    transform: rotateY(180deg); 
+    background-image: url('../img/alunos/Faixa_branca.jpeg');
+}
+#alunos article:nth-child(1) h4{
+    background-color: green;
+}
 #alunos article:nth-child(2){
     background-image: url('../img/alunos/Faixa_branca.jpeg');
     background-size: cover;
@@ -391,6 +426,23 @@ article p{
     background-size: cover;
     border: 4px solid white;
 }
+#aluns article:nth-child(1) h4{
+    background-color: green;
+}
+
+/*Parceiros*/
+
+#parceiros article{
+    width: 100%;
+}
+#parceiros h2{
+    font-size: 72pt;
+}
+
+
+
+
+
 /* Fundo da Pagina */
 
 footer{
@@ -415,7 +467,15 @@ footer #inst img:hover{
     background-color: rgb(206, 17, 48);
 }
 /* Animações */
-
+[data-scale]{
+    opacity: .5;
+    transform: scale(0.5);
+    transition-delay: .5s;
+    transition: all .8s;
+}
+[data-scale].volta{
+    transform: scale(1);
+}
 [data-anima]{
     opacity: 0;
     transition: .5s;
@@ -460,19 +520,7 @@ footer #inst img:hover{
     -ms-transform: translate3d(0,0,0);
     -o-transform: translate3d(0,0,0);
 }
-[data-hist].anima{
-    opacity: 1;
-    transform: translate3d(0,0,0);
-}
-[data-hist]{
-  
-    opacity: 0;
-   transition: .5s;
-   -webkit-transition: .5s;
-   -moz-transition: .5s;
-   -ms-transition: .5s;
-   -o-transition: .5s;
-}
+
 
 
 /*Responsivo*/
@@ -584,6 +632,7 @@ footer #inst img:hover{
         height: 100px;
     }
     .titulo h2{
+        color: white;
         font-size: 15pt;
     }
     #m1 article:nth-child(1){
