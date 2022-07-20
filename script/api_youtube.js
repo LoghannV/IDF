@@ -1,7 +1,7 @@
 
 // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
-
+let videos = ['_uzwTkZPFHo','IEAMcrQU828','62a9oc6O534','YunFhcKvRII']
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
@@ -13,7 +13,7 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '360',
     width: '640',
-    videoId: 'YunFhcKvRII',
+    videoId: videos[1],
     events: {
       'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange
