@@ -132,15 +132,18 @@ article p{
 /* Sobre Nos */
 #historia{
     /*height: 2860px;*/
-    height: 700px;
+    height: 800px;
     flex-wrap: wrap;
-    
+    transition: height 1s ease-in-out;
 }
 #historia article{
     width: 100%;
-    height: 700px;
-    color: white;
- 
+    height: 0px;
+    transition: height 1s ease-in-out;
+    visibility: hidden;
+}
+.revela{
+    height: 800px;
 }
 #historia article:nth-child(1){
     width: 100%;
@@ -150,11 +153,10 @@ article p{
     -moz-transition: all 1s;
     -ms-transition: all 1s;
     -o-transition: all 1s;
- 
-    
+    height: 800px;
+    visibility: visible;
 }
 #historia article:nth-child(even){
-
     background-image: linear-gradient(to right, darkblue 50%, darkred 50%);
 
 }
@@ -164,12 +166,31 @@ article p{
 #historia article:nth-child(odd):not(article:nth-child(1)){
     background-image: linear-gradient(to right, darkred 50%, darkblue 50%);
  
-    
 }
-#artigos_video a{
+#historia article h1{
     text-align: center;
     color: white;
+    font-size: 72pt;
 }
+#historia article img{
+    width:15%;
+    height: 80%;
+}
+#historia #btn-mais{
+    width:100px;
+    height: 90px;
+    cursor:pointer;
+    align-items: center;
+    background-color: white;
+    border-radius: 250px;
+    -webkit-border-radius: 250px;
+    -moz-border-radius: 250px;
+    -ms-border-radius: 250px;
+    -o-border-radius: 250px;
+    align-items: center;
+    margin: auto auto;
+}
+
 /*Modal*/
 
 .modal{
@@ -201,29 +222,8 @@ article p{
     width: 80%;
     height: 85%;
 }
-#historia article h1{
-    text-align: center;
-    color: white;
-    font-size: 72pt;
-}
-#historia article img{
-    width:15%;
-    height: 80%;
-}
-#historia #btn-mais{
-    width:100px;
-    height: 90px;
-    cursor:pointer;
-    align-items: center;
-    background-color: white;
-    border-radius: 250px;
-    -webkit-border-radius: 250px;
-    -moz-border-radius: 250px;
-    -ms-border-radius: 250px;
-    -o-border-radius: 250px;
-    align-items: center;
-    margin: auto auto;
-}
+
+
 #btn-mais p{
     text-align: center;
     padding: 6px;

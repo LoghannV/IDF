@@ -1,37 +1,33 @@
 
-var min = true
-var i = 0;
-var itens = document.querySelectorAll("#historia article")
-var article_hist =  document.getElementById("historia")
-let escondido = true
+const itens = document.querySelectorAll("#historia article")
+const article_hist =  document.getElementById("historia")
 const articles = document.querySelectorAll('#historia article')
-articles.forEach((element, index)=>{
-   if(index!=0){
-      element.style.visibility = 'hidden'
-   }
-})
+const texto_do_botao = document.getElementById("btn-mais-text")
 
 
 
-document.getElementById("btn-mais").addEventListener('click',()=>{
-   if(escondido){
-      articles.forEach((element, index)=>{
-            if(index!=0){
-                  document.getElementById('btn-mais-text').innerHTML = '^'
-                  article_hist.style.height="2800px"
-                  element.style.visibility = 'visible'    
-            }
-      })
-      escondido = false 
-   }else{
-      articles.forEach((element, index)=>{
+let revela = false
+const click_btn = document.getElementById("btn-mais").addEventListener('click',()=>{
+   
+   if(!revela){
+      articles.forEach((element,index)=>{
          if(index!=0){
-               document.getElementById('btn-mais-text').innerHTML = 'V'
-               article_hist.style.height="800px"
-               element.style.visibility = 'hidden'    
+            element.classList.add("revela")
+            element.style.visibility = 'visible'
          }
-   })
-   escondido = true
+      })
+      texto_do_botao.innerHTML = "^"
+      article_hist.style.height= "2800px"
+      revela = true
+   }else{
+      articles.forEach((element,index)=>{
+         if(index!=0){
+            element.classList.remove("revela") 
+         }
+      })
+      texto_do_botao.innerHTML = "V"
+      article_hist.style.height= "800px"
+      revela = false
    }
 })
 
