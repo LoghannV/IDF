@@ -6,6 +6,7 @@ const texto_do_botao = document.getElementById("btn-mais-text")
 
 
 
+
 let revela = false
 const click_btn = document.getElementById("btn-mais").addEventListener('click',()=>{
    
@@ -31,3 +32,9 @@ const click_btn = document.getElementById("btn-mais").addEventListener('click',(
    }
 })
 
+
+const popup = document.getElementById('pop').addEventListener('click',function(){
+   this.remove()
+   document.getElementById("fundo").remove()
+   document.documentElement.style.setProperty("--visible",'visible')
+})
