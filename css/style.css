@@ -85,6 +85,16 @@ header nav ul li{
     display: inline;
     padding: 20px 10px;
 }
+.donate a{
+    background-color: green;
+    border: 3px solid white;
+    padding: 5px;
+    border-radius: 5%;
+}
+.donate a:hover{
+    background-color: lightgreen;
+    color: white;
+}
 
 header nav ul li a{
     text-decoration: none;
