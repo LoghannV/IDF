@@ -15,7 +15,6 @@ function onYouTubeIframeAPIReady() {
     width: '640',
     videoId: videos[1],
     events: {
-      'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange
     }
   });

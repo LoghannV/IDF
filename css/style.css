@@ -9,12 +9,16 @@ font-family: 'Secular One', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 
 */
-
+/*Variaveis*/
+:root{
+    --visible:hidden;
+}
 *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     overflow: none; 
+    overflow-y: var(--visible);
 }
 html{
     scroll-behavior: smooth;
@@ -537,7 +541,23 @@ footer #inst img:hover{
     -o-transform: translate3d(0,0,0);
 }
 
-
+/*POP UP*/
+#pop{
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-color: rgba(000, 000, 000, 0.8);
+    width: 100%;
+    height: 100%;
+}
+#pop img{
+    max-width: 50%;
+    max-height: 50%;
+    border: 5px solid white;
+    outline: 5px solid black;
+    border-radius: 2%;
+    cursor: pointer;
+}
 
 /*Responsivo*/
 @media only screen and (min-width:360px) and (max-width:810px){

@@ -31,3 +31,8 @@ const click_btn = document.getElementById("btn-mais").addEventListener('click',(
    }
 })
 
+const popup = document.getElementById('popup').addEventListener('click',function(){
+  this.remove()
+  document.getElementById('pop').remove() 
+  document.documentElement.style.setProperty('--visible','visible')
+})
