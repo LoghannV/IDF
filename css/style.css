@@ -8,40 +8,13 @@ font-family: 'Rubik', sans-serif;
 font-family: 'Secular One', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 
-/*Variavies*/
-:root{
-    --visible:hidden;
-}
-
-
-/*FORMATAÇÃO POP*/
-#fundo{
-    position: absolute;
-    display: flex;
-    top:0px;
-    background-color: rgba(000, 000, 000, .4);
-    width: 100%;
-    height: 100%;
-}
-#fundo img{
-
-    max-width: 80%;
-    max-height: 80%;
-    border: 10px solid white;
-    outline: 5px solid black;
-    border-radius: 1%;
-    cursor: pointer;
-    opacity: 1;
-    margin: auto auto;
-   
-}
+*/
 
 *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     overflow: none; 
-    overflow-y: var(--visible);
 }
 html{
     scroll-behavior: smooth;
@@ -59,6 +32,24 @@ h3{
     font-size: 25pt;
     height: 55%;
 }
+
+article{
+    background-size: cover;
+    
+}
+article h2{
+    text-align: center;
+    font-size: 32pt;
+    color:white;
+}
+
+article p{
+    text-align: justify;
+    font-size: 20pt;
+    color:white;
+}
+
+
 article img{
     height: 100%;
 }
@@ -84,16 +75,6 @@ header nav ul{
 header nav ul li{
     display: inline;
     padding: 20px 10px;
-}
-.donate a{
-    background-color: green;
-    border: 3px solid white;
-    padding: 5px;
-    border-radius: 5%;
-}
-.donate a:hover{
-    background-color: lightgreen;
-    color: white;
 }
 
 header nav ul li a{
@@ -154,18 +135,6 @@ video{
     background-color: black;
 }
 
-article h2{
-    text-align: center;
-    font-size: 32pt;
-    color:white;
-}
-
-article p{
-    text-align: justify;
-    font-size: 20pt;
-    color:white;
-}
-
 /* Sobre Nos */
 #historia{
     /*height: 2860px;*/
@@ -194,6 +163,7 @@ article p{
     visibility: visible;
 }
 #historia article:nth-child(even){
+
     background-image: linear-gradient(to right, darkblue 50%, darkred 50%);
 
 }
@@ -286,78 +256,65 @@ article p{
     margin: auto auto;
     font-size: 50pt;
 }
-#sobre article{
+
+/*Formataçao do sobre*/
+
+#sobre img{
+  max-width: 300px;
+  max-height: 700px;
+}
+
+#sobre section article h2,h3,p{
+    color: white;
+}
+
+
+/*Formatação das Section do Sobre*/
+
+#sobre .preta_centro article{
     background-color: black;
     grid-template-rows: 80px 120px;
 }
-
-#sobre h2{
+#sobre .preta_centro h2{
     font-size: 42pt;
 }
-#sobre h3{
+#sobre .preta_centro h3{
     color:black;
     background-color: white;
     text-align: center;
     height: 80%;
 }
-#m1 article{
-    background-color: white;
-}
-#m1 article h2{
-    color:black;
+
+#sobre .preta_direita article h2{
     font-size: 42pt;
 }
-#m1 article h3{
-    color:white;
+#sobre .preta_direita article h3{
     text-align: center;
     background-color:black;
  
 }
-#m1 article p{
-    color:black;
-}
-#m1 article:nth-child(1){
+
+#sobre .preta_direita article:nth-child(1){
     width: 100%;
 }
-#m1 article:nth-child(2){
-    background: url('../img/fundo_branco.jpg') no-repeat;
-    background-size: cover;
+#sobre .preta_direita article:nth-child(2){
+    background: url('../img/fundo_branco.jpg') no-repeat;   
 }
 
-#m2 article{
-    background-color: rgb(238, 232, 220);
-}
-#m2 article:nth-child(1){
+#sobre .preta_esquerda article:nth-child(1){
     background: url('../img/fundo_creme.jpg') no-repeat;
     background-size: cover;
+   
 }
-#m2 article:nth-child(2){
+#sobre .preta_esquerda article:nth-child(2){
     width: 100%;
 }
 
-#m2 article h2{
-    color: black;
-}
-#m2 article p{
-    color: black;
-}
-#m2 article h3{
- 
-    color: rgb(238, 232, 220);
+#sobre .preta_esquerda article h3{
     text-align: center;
     background-color:black;
 }
-#m3 article:nth-child(2){
-    background-color:rgb(105, 102, 102);
-    width: 50%;
-}
-#m3 article:nth-child(2) img{
-    height: 70%;
-}
-#m3 article:nth-child(1){
-    background-color:rgb(114, 108, 108);
-    width: 100%;
-}
+
 /* Contato */
 #contato article{
     width: 100%;
@@ -382,8 +339,7 @@ article p{
     color: black;
     font-weight: bold;
 }
-#contato article img{
-    
+#contato article img{    
     border:5px solid white;
 	width:500px;
 	height:500px;
@@ -398,7 +354,7 @@ article p{
 #alunos article{
     cursor: pointer;
     background-color: white;
-    width: 22.8%;
+    width: 25%;
     margin: 15px;
     height: 40%;
     outline: 1px solid black;
@@ -408,18 +364,30 @@ article p{
     -ms-border-radius: 3%;
     -o-border-radius: 3%;
     box-shadow: 2px 2px 2px black;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 #alunos article{
     opacity: .8;
 }
 #alunos article:hover{
+    transform: rotateY(180deg);
     opacity: 1;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
 }
 #alunos article h4{
     transform: rotateY(180deg);
     text-align: center;
     width: 100%;
     height: 20%;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
 }
 #alunos article p{
     transform: rotateY(180deg);
@@ -429,38 +397,49 @@ article p{
     height: 40%;
     font-size: 12pt;
     opacity: .6;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
 }
 #alunos article:nth-child(1){
     background-image: url('../img/alunos/Belchior.jpeg');
-    background-size: cover;
     border: 4px solid green;
     transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
 }
 #alunos article:nth-child(1):hover{
-    transform: rotateY(180deg); 
+    transform: rotateY(180deg);
     background-image: url('../img/alunos/Faixa_branca.jpeg');
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
 }
 #alunos article:nth-child(1) h4{
     background-color: green;
 }
 #alunos article:nth-child(2){
     background-image: url('../img/alunos/Faixa_branca.jpeg');
-    background-size: cover;
+   
     border: 4px solid white;
 }
 #alunos article:nth-child(3){
     background-image: url('../img/alunos/Henrique.jpeg');
-    background-size: cover;
+
     border: 4px solid yellow;
 }
 #alunos article:nth-child(4){
     background-image: url('../img/alunos/Miguel.jpeg');
-    background-size: cover;
+   
     border: 4px solid white;
 }
 #alunos article:nth-child(5){
     background-image: url('../img/alunos/Leandro.jpeg');
-    background-size: cover;
+   
     border: 4px solid white;
 }
 #aluns article:nth-child(1) h4{
@@ -597,16 +576,6 @@ footer #inst img:hover{
   }
 }
 @media only screen and (min-width: 360px) and (max-width:430px) {
-    #fundo{
-        width: 100%;
-        height: 100%;
-    }
-    #fundo #pop{
-        width: 86.5%;
-        background-repeat: no-repeat;
-        background-size:contain;
-        height: 40%;
-    }
     section{
         width: 100%;
         height: 400px;
@@ -657,10 +626,10 @@ footer #inst img:hover{
         padding: 0px;
         margin-left:12px;
     }
-    #sobre h2{
+    #sobre .preta_centro h2{
         font-size: 28pt;
     }
-    #sobre h3{
+    #sobre .preta_centro h3{
         font-size: 12pt;
         height: 100%;
         border-radius: 5px;
@@ -669,10 +638,10 @@ footer #inst img:hover{
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
 }
-    #sobre h3 p,i{
+    #sobre .preta_centro h3 p,i{
         font-size:7pt;
     }
-    #sobre p{
+    #sobre .preta_centro p{
         font-size:7pt;
     }
     .titulo{
@@ -682,29 +651,29 @@ footer #inst img:hover{
         color: white;
         font-size: 15pt;
     }
-    #m1 article:nth-child(1){
+    #sobre .preta_direita article:nth-child(1){
         width: 50%;
     }
-    #m1 article:nth-child(odd) h2{
+    #sobre .preta_direita article:nth-child(odd) h2{
         font-size:28pt;
     }
-    #m1 article:nth-child(odd) h3{
+    #sobre .preta_direita article:nth-child(odd) h3{
         font-size:15pt;
     }
-    #m1 article:nth-child(odd) p,i{
+    #sobre .preta_direita article:nth-child(odd) p,i{
         font-size:7pt;
     }
-    #m2 article:nth-child(1){
+    #sobre .preta_esquerda article:nth-child(1){
         width: 90%;
     }
-    #m2 article:nth-child(1) h2{
+    #sobre .preta_esquerda article:nth-child(1) h2{
         font-size:28pt;
     }
-    #m2 article h3{
+    #sobre .preta_esquerda article h3{
         font-size:12pt;
       
     }
-    #m2 article:nth-child(1) p,i{
+    #sobre .preta_esquerda article:nth-child(1) p,i{
         font-size:7pt;
     }
     #contato article h2{
@@ -728,7 +697,6 @@ footer #inst img:hover{
  }*/
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-
     section{
         width: 100%;
         height: 600px;
@@ -762,46 +730,46 @@ footer #inst img:hover{
         padding: 0px;
         margin-left:12px;
     }
-    #sobre h3{
+    #sobre .preta_centro h3{
         height: 100%;
     }
-    #sobre h3 i{
+    #sobre .preta_centro h3 i{
         font-size: 12pt;
     }
-    #sobre article p{
+    #sobre .preta_centro article p{
         font-size:16pt;
     }
-    #m1 article:nth-child(1){
+    #sobre .preta_direita article:nth-child(1){
         width: 50%;
     }
  
-    #m1 article:nth-child(odd) p{
+    #sobre .preta_direita article:nth-child(odd) p{
         font-size:16pt;
     }
-    #m1 article:nth-child(odd) i{
+    #sobre .preta_direita article:nth-child(odd) i{
         font-size:12pt;
     }
-    #m1 article:nth-child(odd) h3{
+    #sobre .preta_direita article:nth-child(odd) h3{
         height: 90%;
     }
-    #m1 article img{
+    #sobre .preta_direita article img{
         width: 90%;
         height: 90%;
     }
-    #m2 article:nth-child(1){
+    #sobre .preta_esquerda article:nth-child(1){
         width: 90%;
     }
-    #m2 article:nth-child(even) i{
+    #sobre .preta_esquerda article:nth-child(even) i{
         font-size:12pt;
     }
-    #m2 article h3{
+    #sobre .preta_esquerda article h3{
         height: 90%;
       
     }
-    #m2 article:nth-child(1) p,i{
+    #sobre .preta_esquerda article:nth-child(1) p,i{
         font-size:7pt;
     }
-    #m2 article img{
+    #sobre .preta_esquerda article img{
         width: 84%;
         height:84%;
     }
@@ -828,13 +796,4 @@ footer #inst img:hover{
 
 @media (min-width: 1200px) {
 
-}
-
-
-
-/*TESTE */
-
-.hist{
-    transition: all 1s;
-    
 }
