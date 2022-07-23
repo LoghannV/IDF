@@ -81,6 +81,18 @@ header nav ul li{
     padding: 20px 10px;
 }
 
+.donate{
+    border: 2px solid white;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: green;
+    padding: 15px;
+}
+.donate:hover{
+    background-color: darkgreen;
+}
+
 header nav ul li a{
     text-decoration: none;
     color: black;
@@ -561,6 +573,12 @@ footer #inst img:hover{
 
 /*Responsivo*/
 @media only screen and (min-width:360px) and (max-width:810px){
+
+    #pop img{
+        max-width: 80%;
+        max-height: 100%;
+        margin: 30% auto;
+    }
     header nav ul{
     left: -500px;
     width: 200px;
@@ -569,8 +587,6 @@ footer #inst img:hover{
     -moz-transition: all 1s;
     -ms-transition: all 1s;
     -o-transition: all 1s;
-   
-   
 }
   header nav ul li{
     position: relative;
