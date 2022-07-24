@@ -289,7 +289,7 @@ video{
 
 #sobre img{
   max-width: 60%;
-  max-height: 90%;
+  max-height: 80%;
 }
 
 #sobre section article h2,h3,p{
@@ -483,7 +483,15 @@ video{
     font-size: 72pt;
 }
 
-
+#parceiros img{
+    width: 20%;
+    height: 50%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
 
 
 
