@@ -23,10 +23,12 @@ font-family: 'Ubuntu', sans-serif;
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
-    
 }
 body{
     background-color: black;
+}
+body *{
+    overflow-y:hidden;
 }
 h1,h2,h3{
     font-family: 'Domine', serif;
